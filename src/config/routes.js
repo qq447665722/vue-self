@@ -1,5 +1,4 @@
-import index from './components/index'
-import ok from './components/ok'
+import index from '../components/index'
 
 /**
  * 设置路由
@@ -10,14 +9,13 @@ export default {
   //异步路由
   '/index': {
     name: 'index',
-    component: (resolve) => {
-      require(['./components/index'], resolve)
-    }
+    component: index
   },
   '/ok': {
     name: 'ok',
+    //按需加载组件
     component: (resolve) => {
-      require(['./components/ok'], resolve)
+      require(['../components/ok'], resolve)
     }
   }
 

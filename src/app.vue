@@ -1,29 +1,12 @@
 <template lang="html">
-
-<div class="container-fluid">
-    <!-- 路由外链 -->
+  <div id="app">
     <router-view></router-view>
-</div>
-
+  </div>
 </template>
 
 <script>
-
-import store from './vuex/store' // import 我们刚刚创建的 store
-
-import {
-    getCookie,
-    setCookie
-}
-from './assets/js/cookie'
-
+import store from './vuex' // import 我们刚刚创建的 store
 export default {
-    events: {
-        setToken: function(token) {
-            setCookie('zhangRongliangToken', token)
-        }
-    },
     store
 };
-
 </script>

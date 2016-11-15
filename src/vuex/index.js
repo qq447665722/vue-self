@@ -1,16 +1,20 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import state from './state'
+import actions from './actions'
 import mutations from './mutations'
 import getters from './getters'
+import modules from './modules'
 
-// 告诉 vue “使用” vuex
+
 Vue.use(Vuex)
 
-// 整合初始状态和变更函数，我们就得到了我们所需的 store
-// 至此，这个 store 就可以连接到我们的应用中
+// A Vuex instance is created by combining the state, mutations, actions,
+// and getters.
 export default new Vuex.Store({
     state,
+    getters,
+    actions,
     mutations,
-    getters
+    modules
 })

@@ -35,7 +35,6 @@
   // 方法1
   import { getCount, getSumnub } from '../vuex/getters';
 
-
   export default {
     computed: {
       //方法3

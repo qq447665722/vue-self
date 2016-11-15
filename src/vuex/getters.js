@@ -3,9 +3,9 @@
 // export const getCount = state => state.count
 
 export function getCount(state) {
-    return state.count
+  return state.count
 }
 
 export function getSumnub(state) {
-    return state.sumnub
+  return state.sumnub
 }
